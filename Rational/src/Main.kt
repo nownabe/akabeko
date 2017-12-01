@@ -25,4 +25,8 @@ fun main(args: Array<String>) {
     println("\n# 3.6 メソッドのオーバロード")
     println(Rational(1, 4) + 1)
     println(Rational(1, 1) + 2)
+
+    println("\n# 3.7 拡張関数")
+    println(3 + Rational(2, 1))
+    println(1 + Rational(1, 2) + 2)
 }
