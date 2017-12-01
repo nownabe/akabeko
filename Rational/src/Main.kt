@@ -10,4 +10,8 @@ fun main(args: Array<String>) {
     } catch (e: IllegalArgumentException) {
         println(e.message)
     }
+
+    println(Rational(17, 17))
+    println(Rational(55, 100))
+    println(Rational(1234, 5678))
 }
