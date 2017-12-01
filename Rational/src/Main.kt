@@ -21,4 +21,8 @@ fun main(args: Array<String>) {
 
     println(Rational(1,2) + Rational(1, 5))
     println(Rational(1,6) + Rational(1,3) + Rational(1, 2))
+
+    println("\n# 3.6 メソッドのオーバロード")
+    println(Rational(1, 4) + 1)
+    println(Rational(1, 1) + 2)
 }

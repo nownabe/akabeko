@@ -14,6 +14,8 @@ class Rational(n: Int, d: Int) {
             denominator * that.denominator
     )
 
+    operator fun plus(n: Int) = Rational(numerator + n * denominator, denominator)
+
     override fun toString() = "$numerator/$denominator"
 
     tailrec private fun gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
