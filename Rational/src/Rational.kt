@@ -5,9 +5,14 @@ class Rational(n: Int, d: Int) {
         require(d != 0, {"denominator must not be zero"})
     }
 
-    private val g = gcd(Math.abs(n), Math.abs(d))
-    val numerator = n / g
-    val denominator = d / g
+    private val g by lazy { gcd(Math.abs(n), Math.abs(d)) }
+    val numerator by lazy { n / g }
+    val denominator by lazy { d / g }
+
+    operator fun plus(that: Rational) = Rational(
+            numerator * that.denominator + that.numerator * denominator,
+            denominator * that.denominator
+    )
 
     override fun toString() = "$numerator/$denominator"
 
